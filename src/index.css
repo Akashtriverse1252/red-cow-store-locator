@@ -1,13 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color: #000;
+  font-family: var(--font-Archer);
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+:root {
+  --font-montserrat: "AvertaStd", sans-serif;
+  --font-Archer: Archer, sans-serif;
+  --font-lemon-tea: Lemon Tea Regular;
+  --font-old--standard-tt: "Old Standard TT";
+  --color-red: #eb3139;
+  --color-high-red: #ca0103;
+  --color-red-2: rgb(233 60 68);
+}
+
+.__container {
+  max-width: 92%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.web-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 50px 0;
+  margin: 0 auto;
+}
+.logo img {
+  width: 375px;
+  height: auto;
+  aspect-ratio: 5/3;
+}
+h1.title_heading {
+  color: var(--color-red);
+  font-family: var(--font-lemon-tea);
+  font-size: 62px;
+  line-height: 85px;
+  letter-spacing: 2px;
+
+  position: relative;
+  text-transform: uppercase;
+  border-top: 1.5px solid var(--color-red);
+  border-bottom: 1.5px solid var(--color-red);
+}
+.title_heading {
+  margin: 10px auto;
+  padding: 5px 0;
+  width: fit-content;
+}
+.store_image {
+  width: 50%;
+}
+.store_image img {
+  width: 100%;
+  height: auto;
+}
+.card_data {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+._card {
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: row;
+  border-bottom: 1.5px #ccc solid;
+  padding-bottom: 35px;
+}
+.card_data h2 {
+  font-family: Mikkel Sans;
+  font-size: 50px;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: bold;
+}
+.card_data .address {
+  color: #000;
+  font-family: var(--font-Archer);
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 40px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.btn_red {
+  font-family: var(--font-Archer);
+  background-color: var(--color-high-red);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 22px;
+  width: 220px;
+  height: 55px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.btn_red svg {
+  width: 30px;
+  height: auto;
+  fill: #fff;
+  display: inline;
+  margin-right: 5px;
+}
+.btn_red.time {
+  font-size: 18px;
+  padding: 10px 0;
+}
+.get_direction_btn {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 15px;
+  display: flex;
+}
+
+.get_direction_btn svg {
+  display: inline;
+  margin-right: 10px;
+  height: auto;
+  width: 50px;
 }
