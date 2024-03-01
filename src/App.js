@@ -10,7 +10,7 @@ function App() {
   Aos.init();
   return (
     <Router>
-      <Routes>
+      <Routes basename="/ice-cream/parlour-locator">
         <Route exact path="/" element={<Home />} />
       </Routes>
     </Router>

@@ -26,7 +26,7 @@ const Home = () => {
       <WebLayout _sclass="tabs pt-0" _class_ID="tabs" _class="tabs_scn">
         <TabsFor />
       </WebLayout>
-      <Footer/>
+      <Footer />
     </>
   );
 };
