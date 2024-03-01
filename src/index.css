@@ -48,10 +48,9 @@ section {
 h1.title_heading {
   color: var(--color-red);
   font-family: var(--font-lemon-tea);
-  font-size: 62px;
-  line-height: 85px;
-  letter-spacing: 2px;
-
+  font-size: 50px;
+  line-height: 80px;
+  letter-spacing: 2.4px;
   position: relative;
   text-transform: uppercase;
   border-top: 1.5px solid var(--color-red);
@@ -75,11 +74,11 @@ h1.title_heading {
   flex-direction: column;
 }
 ._card {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   flex-direction: row;
   border-bottom: 1.5px #ccc solid;
-  padding-bottom: 35px;
+  padding: 35px 0;
 }
 .card_data h2 {
   font-family: Mikkel Sans;
@@ -95,8 +94,8 @@ h1.title_heading {
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 40px;
-  white-space: nowrap;
   line-height: 1.2;
+  width: 20ch;
 }
 .btn_red {
   font-family: var(--font-Archer);
@@ -105,28 +104,29 @@ h1.title_heading {
   color: #fff;
   font-weight: 500;
   font-size: 22px;
-  width: 220px;
+  width: 240px;
   height: 55px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
+  letter-spacing: 1px;
 }
 
 .btn_red svg {
-  width: 30px;
+  width: 25px;
   height: auto;
   fill: #fff;
   display: inline;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 .btn_red.time {
   font-size: 18px;
   padding: 10px 0;
 }
 .get_direction_btn {
-  font-size: 20px;
+  font-size: 22px;
   color: #000000;
   font-weight: bold;
   margin-top: 15px;
@@ -137,5 +137,360 @@ h1.title_heading {
   display: inline;
   margin-right: 10px;
   height: auto;
-  width: 50px;
+  width: 42px;
+}
+/* Style for the tab container */
+.tab-container {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Style for individual tabs */
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background-color: #f8f8f8;
+}
+
+.tab-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 15px 10px;
+}
+.tab-buttons button {
+  text-transform: capitalize;
+  width: 230px;
+  height: 65px;
+  color: #000;
+  background: rgb(230 223 215);
+  margin: 0 20px;
+  border-radius: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+.tab-buttons button.active {
+  color: #fff;
+  background: var(--color-high-red);
+}
+.tabs-scn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.tab_pane {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.tab_pane.visible {
+  opacity: 1;
+}
+.footer_cnt {
+  width: 100%;
+  background-color: #eb3139;
+  border-radius: 260px 260px 0 0;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.socail_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+.socail_icon a {
+  display: flex;
+}
+.socail_icon a svg {
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+  fill: #fff;
+}
+.socail_icon a:hover svg {
+  fill: #000;
+}
+
+.footer_cnt p {
+  font-size: 50px;
+  color: #fff;
+  margin: 0 auto;
+  width: max-content;
+  text-align: center;
+  margin: 30px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 40px;
+}
+._buttons {
+  margin-top: 20px;
+}
+.loader_parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.loader {
+  border: 4px solid rgba(231, 121, 121, 0.1);
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.loader {
+  border: 4px solid rgba(231, 121, 121, 0.1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+}
+
+.loader {
+  border: 4px solid rgba(231, 121, 121, 0.1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.internet_error {
+  text-align: center;
+  font-size: 18px;
+}
+
+@media all and (max-width: 1100px) {
+  .card_data h2 {
+    font-size: 42px;
+  }
+
+  .card_data .address {
+    font-size: 22px;
+  }
+
+  div.btn_red {
+    font-size: 20px;
+  }
+
+  div.btn_red.time {
+    font-size: 16px;
+  }
+
+  div.get_direction_btn {
+    font-size: 20px;
+  }
+
+  .store_image {
+    width: 55%;
+  }
+
+  .footer_cnt p {
+    font-size: 40px;
+  }
+
+  .footer_cnt {
+    border-radius: 120px 120px 0 0;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    gap: 30px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  section {
+    padding: 35px 0;
+  }
+  .footer_cnt p {
+    width: 21ch;
+    font-size: 40px;
+    margin: 20px 0;
+    padding-bottom: 30px;
+    line-height: 1.3;
+  }
+  .tabs-scn,
+  .footer_cnt {
+    gap: 20px;
+  }
+  .store_image {
+    width: 58%;
+  }
+}
+@media all and (max-width: 680px) {
+  .web-container {
+    width: 94%;
+  }
+  .logo img {
+    width: 290px;
+    margin: 0 auto;
+  }
+  h1.title_heading {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+
+  .tab-buttons button {
+    width: 150px;
+    height: 55px;
+    margin: 0;
+  }
+
+  .tab-buttons {
+    justify-content: space-between;
+  }
+  div.btn_red {
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+  }
+  div.btn_red.time {
+    font-size: 15px;
+  }
+  ._buttons {
+    margin-top: 10px;
+  }
+
+  .footer_cnt {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .footer_cnt p {
+    width: 21ch;
+    font-size: 37px;
+    margin: 10px 0;
+    padding-bottom: 30px;
+    line-height: 1.2;
+  }
+  .card_data .address {
+    font-size: 19px;
+  }
+  .tab-buttons button {
+    font-size: 22px;
+  }
+  .card_data h2 {
+    font-size: 35px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .logo img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  ._card {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .store_image {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .card_data h2 {
+    font-size: clamp(20px, 9vw, 45px);
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .card_data .address {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .card_data {
+    width: 100%;
+  }
+
+  div.btn_red {
+    width: 48%;
+  }
+
+  ._buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+
+  .footer_cnt p {
+    width: 17ch;
+  }
+  h1.title_heading {
+    font-size: 35px;
+    line-height: 1.5;
+  }
+  .socail_icon {
+    gap: 12px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  h1.title_heading {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  ._buttons div {
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  div.btn_red {
+    width: 100%;
+    font-size: 20px;
+  }
+  div.btn_red.time {
+    font-size: 18px;
+  }
+  .footer_cnt p {
+    width: 17ch;
+    font-size: 28px;
+  }
+  .tab-buttons button {
+    font-size: 18px;
+    height: 45px;
+  }
+  .footer_cnt {
+    width: 100%;
+    padding-bottom: 40px;
+    border-radius: 90px 90px 0 0;
+    height: 320px;
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+}
+@media all and (max-width: 380px) {
+  .footer_cnt p {
+    border-bottom: 1.5px solid rgb(243 236 236 / 46%);
+  }
+  h1.title_heading {
+    font-size: 7.4vw;
+  }
+  section {
+    padding: 27px 0;
+  }
 }

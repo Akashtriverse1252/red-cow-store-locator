@@ -1,68 +1,26 @@
-import {
-    Tabs,
-    TabsHeader,
-    TabsBody,
-    Tab,
-    TabPanel,
-  } from "@material-tailwind/react";
-   import React from 'react'
-   
-   const index = () => {
-    const data = [
-        {
-          label: "HTML",
-          value: "html",
-          desc: `It really matters and then like it really doesn't matter.
-          What matters is the people who are sparked by it. And the people 
-          who are like offended by it, it doesn't matter.`,
-        },
-        {
-          label: "React",
-          value: "react",
-          desc: `Because it's about motivating the doers. Because I'm here
-          to follow my dreams and inspire other people to follow their dreams, too.`,
-        },
-        {
-          label: "Vue",
-          value: "vue",
-          desc: `We're not always in the position that we want to be at.
-          We're constantly growing. We're constantly making mistakes. We're
-          constantly trying to express ourselves and actualize our dreams.`,
-        },
-        {
-          label: "Angular",
-          value: "angular",
-          desc: `Because it's about motivating the doers. Because I'm here
-          to follow my dreams and inspire other people to follow their dreams, too.`,
-        },
-        {
-          label: "Svelte",
-          value: "svelte",
-          desc: `We're not always in the position that we want to be at.
-          We're constantly growing. We're constantly making mistakes. We're
-          constantly trying to express ourselves and actualize our dreams.`,
-        },
-      ];
-     
-      return (
-        <Tabs value="html">
-          <TabsHeader>
-            {data.map(({ label, value }) => (
-              <Tab key={value} value={value}>
-                {label}
-              </Tab>
-            ))}
-          </TabsHeader>
-          <TabsBody>
-            {data.map(({ value, desc }) => (
-              <TabPanel key={value} value={value}>
-                {desc}
-              </TabPanel>
-            ))}
-          </TabsBody>
-        </Tabs>
-     )
-   }
-   
-   export default index
-   
+import React, { useState } from 'react';
+
+function index() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
+  return (
+    <div>
+      <div className="tab-buttons">
+        <button className={activeTab === 0 ? 'active' : ''} onClick={() => handleTabClick(0)}>Tab 1</button>
+        <button className={activeTab === 1 ? 'active' : ''} onClick={() => handleTabClick(1)}>Tab 2</button>
+        <button className={activeTab === 2 ? 'active' : ''} onClick={() => handleTabClick(2)}>Tab 3</button>
+      </div>
+      <div className="tab-content">
+        {activeTab === 0 && <p>Content for Tab 1</p>}
+        {activeTab === 1 && <p>Content for Tab 2</p>}
+        {activeTab === 2 && <p>Content for Tab 3</p>}
+      </div>
+    </div>
+  );
+}
+
+export default index;

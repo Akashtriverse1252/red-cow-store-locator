@@ -1,0 +1,63 @@
+{
+  "Kolkata": [
+    {
+      "title": "html",
+      "tabData": {
+        "img": "https://redcowdairy.in/locator_img/store-image.png",
+        "storeName": "Alambazar",
+        "address": "62 Deshbandhu Road, Near Kalitala Math Kolkata - 700035",
+        "contactNumber": "+91 6292-211239",
+        "openingTime": "Timings: 10 am-11:30 Pm",
+        "Location": "https://maps.app.goo.gl/mGky1HaHTwkKhiDq5"
+      }
+    },
+    {
+      "title": "html",
+      "tabData": {
+        "img": "https://redcowdairy.in/locator_img/store-image.png",
+        "storeName": "Salt Lake",
+        "address": "BG 1, Sector II, Saltlake, Near Tank no.7 700064, Kolkata West Bengal, India",
+        "contactNumber": "+91 6292-211239",
+        "openingTime": "Timings: 10 am-11:30 Pm",
+        "Location": "https://maps.app.goo.gl/LkEe3fWf7QsqLmxn7"
+      }
+    },
+    {
+      "title": "html",
+      "tabData": {
+        "img": "https://redcowdairy.in/locator_img/store-image.png",
+        "storeName": "Lake Town",
+        "address": "P-74, Lake Town Block B, Opp. Central Bank of India 700089, Kolkata West Bengal, India",
+        "contactNumber": "+91 6292-211239",
+        "openingTime": "Timings: 10 am-11:30 Pm",
+        "Location": "https://maps.app.goo.gl/5eZTBdE9xHsfUM6j6"
+      }
+    }
+  ],
+  "Hoogly": [
+    {
+      "title": "html",
+      "tabData": {
+        "img": "https://redcowdairy.in/locator_img/store-image.png",
+        "storeName": "Chandannagar",
+        "address": "Red Cow Dairy World, G.T. Road, Bagbazar, Court More, Chandannagar- 712136, Hooghly.",
+        "contactNumber": "+91 6292-211239",
+        "openingTime": "Timings: 10 am-11:30 Pm",
+        "Location": "https://maps.app.goo.gl/QqkxV2PqVKscRHbL9"
+      }
+    }
+  ],
+  "Goa": [
+    {
+      "title": "html",
+      "tabData": {
+        "img": "https://redcowdairy.in/locator_img/store-image.png",
+        "storeName": "Alto Porvorim",
+        "address": "Reva Star, Survey No. 176/1, Shop No- 3 - 1813/4, Opp Goa board, Alto Porvorim Bardez Goa- 403521",
+        "contactNumber": "+91 6292-211239",
+        "openingTime": "Timings: 10 am-11:30 Pm",
+        "Location": "https://maps.app.goo.gl/Dw18p4FBiDMtxtKq7"
+      }
+    }
+  ]
+}

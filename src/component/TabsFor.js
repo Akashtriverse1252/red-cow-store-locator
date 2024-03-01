@@ -1,59 +1,102 @@
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
+import React, { useState, useEffect } from "react";
+import Card from "./Card/index";
 
-const index = () => {
-  const data = [
-    {
-      label: "Kolkata",
-      value: "Kolkata",
-      desc: `It really matters and then like it really doesn't matter.
-          What matters is the people who are sparked by it. And the people 
-          who are like offended by it, it doesn't matter.`,
-    },
-    {
-      label: "Hoogly",
-      value: "Hoogly",
-      desc: `Because it's about motivating the doers. Because I'm here
-          to follow my dreams and inspire other people to follow their dreams, too.`,
-    },
-    {
-      label: "Goa",
-      value: "Goa",
-      desc: `We're not always in the position that we want to be at.
-          We're constantly growing. We're constantly making mistakes. We're
-          constantly trying to express ourselves and actualize our dreams.`,
-    },
-  ];
+const Index = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [citiesData, setCitiesData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://redcowdairy.in/api/fetch_locator_data.php"
+        );
+
+        if (!response.ok) {
+          // Handle non-successful responses
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        setCitiesData(result);
+      } catch (error) {
+        // Handle fetch errors
+        setError("Network issue. Please check your internet connection.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
 
   return (
-    <Tabs value="html">
-      <TabsHeader className=" w-2/3 mx-auto ">
-        {data.map(({ label, value }) => (
-          <Tab key={value} value={value} className="tab_title ">
-            {label}
-          </Tab>
-        ))}
-      </TabsHeader>
-      <TabsBody
-        animate={{
-          initial: { y: 250 },
-          mount: { y: 0 },
-          unmount: { y: 250 },
-        }}
-      >
-        {data.map(({ value, desc }) => (
-          <TabPanel key={value} value={value}>
-            {desc}
-          </TabPanel>
-        ))}
-      </TabsBody>
-    </Tabs>
+    <>
+      <div className="tab-cnt">
+        {loading ? (
+          <p className="loader_parent"><span className="loader"></span></p>
+        ) : error ? (
+          <p className="internet_error">{error}</p>
+        ) : (
+          <div>
+            <div
+              className="tabs-scn"
+              data-aos-easing="ease-in-sine"
+              data-aos-once="true"
+              data-aos-duration="600"
+              data-aos="fade-up"
+            >
+              <div className="tab-buttons">
+                {citiesData &&
+                  Object.keys(citiesData).map((city, index) => (
+                    <button
+                      key={index}
+                      className={activeTab === index ? "active" : ""}
+                      onClick={() => handleTabClick(index)}
+                    >
+                      {city}
+                    </button>
+                  ))}
+              </div>
+              <div className="tab-content w-full">
+                {citiesData &&
+                  Object.values(citiesData).map((cityData, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className={`tab_pane ${
+                          activeTab === index ? "visible" : ""
+                        }`}
+                      >
+                        <div
+                          style={{
+                            display: activeTab === index ? "block" : "none",
+                          }}
+                        >
+                          {cityData.map((locationData, locationIndex) => (
+                            <Card
+                              key={locationIndex}
+                              title={locationData.title}
+                              tabData={locationData.tabData || {}}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
-export default index;
+export default Index;
