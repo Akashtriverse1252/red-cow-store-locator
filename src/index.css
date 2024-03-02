@@ -259,7 +259,7 @@ h1.title_heading {
   width: 36px;
   height: 36px;
 }
-.tab-content{
+.tab-content {
   width: 100%;
 }
 
@@ -269,6 +269,13 @@ h1.title_heading {
   width: 36px;
   height: 36px;
   animation: spin89345 1s linear infinite;
+}
+.btn_red:hover a {
+  color: #fff;
+}
+
+.btn_red.time:hover a {
+  color: #000;
 }
 
 @keyframes spin89345 {
@@ -446,7 +453,7 @@ h1.title_heading {
     width: 17ch;
   }
   h1.title_heading {
-    font-size: 35px;
+    font-size: 32px;
     line-height: 1.5;
   }
   .socail_icon {
@@ -494,9 +501,15 @@ h1.title_heading {
     border-bottom: 1.5px solid rgb(243 236 236 / 46%);
   }
   h1.title_heading {
-    font-size: 7.4vw;
+    font-size: 7vw;
   }
   section {
     padding: 27px 0;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .footer_cnt p {
+    font-size: 26px;
   }
 }

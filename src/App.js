@@ -9,8 +9,8 @@ import Aos from "aos";
 function App() {
   Aos.init();
   return (
-    <Router>
-      <Routes basename="/ice-cream/parlour-locator">
+    <Router basename="/ice-cream/parlour-locator">
+      <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
     </Router>

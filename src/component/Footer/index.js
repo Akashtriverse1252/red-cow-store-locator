@@ -40,28 +40,28 @@ const index = () => {
             data-aos="fade-in"
           >
             <div className="">
-              <Link to="https://www.facebook.com/assurepathlabsjalandhar/">
+              <Link to="https://www.facebook.com/RedCowDairy">
                 <Facebook />
               </Link>
             </div>
             <div className="">
-              <Link to="https://www.instagram.com/assurepathlabs/">
+              <Link to="https://www.instagram.com/redcowdairy/?hl=en">
                 <Instagram />
               </Link>
             </div>
 
             <div className="">
-              <Link to="#">
+              <Link to="https://www.linkedin.com/checkpoint/challenge/AgFLPcsSIH3Q6AAAAY3945N7I-s6k9X0uCsh1AGTRw8KovCk3Tp7KQOk_EnRSiCa8Jp_IrIDjQJek-01qw9WsAtplMfE1Q?ut=03pD5OMdmfJH81">
                 <LinkedIn />
               </Link>
             </div>
             <div className="">
-              <Link to="#">
+              <Link to="https://www.youtube.com/@RedcowdairyInKolkata">
                 <Youtube />
               </Link>
             </div>
             <div className="">
-              <Link to="#">
+              <Link to="https://twitter.com/redcowdairykol">
                 <Twitter />
               </Link>
             </div>

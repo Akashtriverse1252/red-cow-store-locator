@@ -32,8 +32,10 @@ const Card = ({ title, tabData = {} }) => {
           </p>
           <div className="_buttons ">
             <div className="btn_red">
-              <Call />
-              {contactNumber}
+              <a href={`tel:${contactNumber}`}>
+                <Call />
+                {contactNumber}
+              </a>
             </div>
             <div className="btn_red time">{openingTime}</div>
             {Location && (
